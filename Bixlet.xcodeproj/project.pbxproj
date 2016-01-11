@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD661C433F6A00904644 /* AppDelegate.swift */; };
-		1769FD691C433F6A00904644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD681C433F6A00904644 /* ViewController.swift */; };
-		1769FD6C1C433F6A00904644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6A1C433F6A00904644 /* Main.storyboard */; };
 		1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6D1C433F6A00904644 /* Assets.xcassets */; };
 		1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */; };
 		1769FD7C1C433F6B00904644 /* BixletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD7B1C433F6B00904644 /* BixletTests.swift */; };
+		1769FD871C433F9C00904644 /* Bixlet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD861C433F9C00904644 /* Bixlet.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +27,13 @@
 /* Begin PBXFileReference section */
 		1769FD631C433F6A00904644 /* Bixlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bixlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD661C433F6A00904644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1769FD681C433F6A00904644 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1769FD6B1C433F6A00904644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1769FD6D1C433F6A00904644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1769FD701C433F6A00904644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1769FD721C433F6A00904644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1769FD771C433F6B00904644 /* BixletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BixletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD7B1C433F6B00904644 /* BixletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BixletTests.swift; sourceTree = "<group>"; };
 		1769FD7D1C433F6B00904644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1769FD861C433F9C00904644 /* Bixlet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bixlet.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +75,7 @@
 		1769FD651C433F6A00904644 /* Bixlet */ = {
 			isa = PBXGroup;
 			children = (
-				1769FD661C433F6A00904644 /* AppDelegate.swift */,
-				1769FD681C433F6A00904644 /* ViewController.swift */,
-				1769FD6A1C433F6A00904644 /* Main.storyboard */,
-				1769FD6D1C433F6A00904644 /* Assets.xcassets */,
-				1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */,
-				1769FD721C433F6A00904644 /* Info.plist */,
+				1769FD881C433FB100904644 /* App */,
 			);
 			path = Bixlet;
 			sourceTree = "<group>";
@@ -94,6 +87,18 @@
 				1769FD7D1C433F6B00904644 /* Info.plist */,
 			);
 			path = BixletTests;
+			sourceTree = "<group>";
+		};
+		1769FD881C433FB100904644 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1769FD661C433F6A00904644 /* AppDelegate.swift */,
+				1769FD861C433F9C00904644 /* Bixlet.storyboard */,
+				1769FD6D1C433F6A00904644 /* Assets.xcassets */,
+				1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */,
+				1769FD721C433F6A00904644 /* Info.plist */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +151,7 @@
 				TargetAttributes = {
 					1769FD621C433F6A00904644 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9538FKS583;
 					};
 					1769FD761C433F6B00904644 = {
 						CreatedOnToolsVersion = 7.2;
@@ -178,8 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */,
+				1769FD871C433F9C00904644 /* Bixlet.storyboard in Resources */,
 				1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */,
-				1769FD6C1C433F6A00904644 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1769FD691C433F6A00904644 /* ViewController.swift in Sources */,
 				1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +226,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1769FD6A1C433F6A00904644 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1769FD6B1C433F6A00904644 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -325,7 +322,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Bixlet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.briangilham.Bixlet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,7 +335,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Bixlet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.briangilham.Bixlet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
