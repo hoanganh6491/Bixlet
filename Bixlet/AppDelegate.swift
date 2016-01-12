@@ -20,7 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("ERROR: Failed to fetch Stations. \(error)")
                 return
             } else {
-                print("IT WORKED")
+                if let data = data {
+                    print("RESPONSE: \(data)")
+                } else {
+                    print("ERROR: No data in response. \(response)")
+                }
             }
         }
         
