@@ -13,6 +13,8 @@ class Client: NSObject {
     typealias ClientResult = (NSData?, NSURLResponse?, NSError?) -> Void
     
     func fetchStations(completion: ClientResult) {
-        NSURLSession.sharedSession().dataTaskWithURL(Client.BaseURL, completionHandler: completion).resume()
+        NSURLSession.sharedSession()
+            .dataTaskWithURL(Client.BaseURL, completionHandler: completion)
+            .resume()
     }
 }

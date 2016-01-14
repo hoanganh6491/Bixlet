@@ -15,19 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        Client().fetchStations { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            if let error = error {
-                print("ERROR: Failed to fetch Stations. \(error)")
-                return
-            } else {
-                if let data = data {
-                    print("RESPONSE: \(data)")
-                } else {
-                    print("ERROR: No data in response. \(response)")
-                }
-            }
-        }
-        
         return true
     }
 
