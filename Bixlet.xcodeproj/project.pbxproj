@@ -14,6 +14,9 @@
 		1769FD871C433F9C00904644 /* Bixlet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD861C433F9C00904644 /* Bixlet.storyboard */; };
 		1769FD8A1C4340AF00904644 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD891C4340AF00904644 /* Podfile */; };
 		1769FD8D1C43428900904644 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD8C1C43428900904644 /* Station.swift */; };
+		17A23CD61C4742D500C8FF47 /* StationsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A23CD51C4742D500C8FF47 /* StationsParser.swift */; };
+		17A23CD81C475D5800C8FF47 /* ClientResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A23CD71C475D5800C8FF47 /* ClientResult.swift */; };
+		17F4E5631C4760B4007B0A07 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E5621C4760B4007B0A07 /* ClientError.swift */; };
 		17FEEA431C44A9010049FE05 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEA421C44A9010049FE05 /* Client.swift */; };
 		6FB9A2140D85C686ED196EDB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4BFBB600F92EC0FE428DFF /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +44,9 @@
 		1769FD861C433F9C00904644 /* Bixlet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bixlet.storyboard; sourceTree = "<group>"; };
 		1769FD891C4340AF00904644 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1769FD8C1C43428900904644 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		17A23CD51C4742D500C8FF47 /* StationsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsParser.swift; sourceTree = "<group>"; };
+		17A23CD71C475D5800C8FF47 /* ClientResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientResult.swift; sourceTree = "<group>"; };
+		17F4E5621C4760B4007B0A07 /* ClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		17FEEA421C44A9010049FE05 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		6E4BFBB600F92EC0FE428DFF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A3AF17FA44ACDF0D0D1467 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				1769FD721C433F6A00904644 /* Info.plist */,
 				1769FD8E1C434BE400904644 /* Client */,
 				1769FD8B1C43421200904644 /* Models */,
+				17A23CD41C4742A900C8FF47 /* Parsers */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -129,8 +136,18 @@
 			isa = PBXGroup;
 			children = (
 				17FEEA421C44A9010049FE05 /* Client.swift */,
+				17A23CD71C475D5800C8FF47 /* ClientResult.swift */,
+				17F4E5621C4760B4007B0A07 /* ClientError.swift */,
 			);
 			name = Client;
+			sourceTree = "<group>";
+		};
+		17A23CD41C4742A900C8FF47 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				17A23CD51C4742D500C8FF47 /* StationsParser.swift */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 		53F95D33E177E690AADA0A9B /* Frameworks */ = {
@@ -305,8 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1769FD8D1C43428900904644 /* Station.swift in Sources */,
+				17A23CD61C4742D500C8FF47 /* StationsParser.swift in Sources */,
 				1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */,
+				17F4E5631C4760B4007B0A07 /* ClientError.swift in Sources */,
 				17FEEA431C44A9010049FE05 /* Client.swift in Sources */,
+				17A23CD81C475D5800C8FF47 /* ClientResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

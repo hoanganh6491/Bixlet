@@ -9,12 +9,20 @@
 import Foundation
 
 class Client: NSObject {
-    static let BaseURL = NSURL(string: "http://www.bikesharetoronto.com/stations/json")!
-    typealias ClientResult = (NSData?, NSURLResponse?, NSError?) -> Void
+    static let StationsURL = NSURL(string: "http://www.bikesharetoronto.com/stations/json")!
+    typealias CompletionHandler = (ClientResult) -> Void
     
-    func fetchStations(completion: ClientResult) {
-        NSURLSession.sharedSession()
-            .dataTaskWithURL(Client.BaseURL, completionHandler: completion)
-            .resume()
+    func fetchStations(completion: CompletionHandler) {
+        NSURLSession.sharedSession().dataTaskWithURL(Client.StationsURL) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            if let e = error {
+                completion(.Failure(ClientError.UnknownError(e)))
+            } else {
+                if let d = data {
+                    completion(.Success(d))
+                } else {
+                    completion(.Failure(ClientError.NoData))
+                }
+            }
+        }.resume()
     }
 }

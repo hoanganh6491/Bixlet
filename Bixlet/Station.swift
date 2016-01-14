@@ -15,7 +15,6 @@ struct Station {
     let availableDocks: Int
     let id: Int
     let landMark: Int
-    let lastCommunicationTime: NSDate
     let latitude: Double
     let longitude: Double
     let stationName: String
@@ -33,7 +32,6 @@ extension Station: Decodable {
             <*> j <| "id"
             <*> j <| "landMark"
         return f
-            <*> (j <| "lastCommunicationTime" >>- toNSDate)
             <*> j <| "latitude"
             <*> j <| "longitude"
             <*> j <| "stationName"
@@ -46,7 +44,8 @@ extension Station: Decodable {
 
 let jsonDateFormatter: NSDateFormatter = {
     let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd' 'HH:mm:ss a" // 2016-01-11 20:40:57 PM
+    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    dateFormatter.dateFormat = "yyyy-MM-dd' 'HH:mm:ss' 'a" // 2016-01-11 20:40:57 PM
     return dateFormatter
 }()
 
