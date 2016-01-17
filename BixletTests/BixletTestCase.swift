@@ -8,7 +8,6 @@
 
 import Foundation
 import XCTest
-import Argo
 
 class BixletTestCase:XCTestCase {
     func dataFromFixture(filename:String) -> NSData {
