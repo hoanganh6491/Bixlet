@@ -6,9 +6,8 @@
 //  Copyright © 2016 Brian Gilham. All rights reserved.
 //
 
-import Foundation
-@testable import Bixlet
 import XCTest
+@testable import Bixlet
 
 class StationsParserTests:BixletTestCase {
     func testParsingStations() {
