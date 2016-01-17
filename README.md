@@ -10,7 +10,7 @@ Bixlet is an open source iOS app, written in Swift, for monitoring the status of
 * Cocoapods
 
 ## Status
-The first version of the app is under active development. As such, the default branch is currently set to `develop`. Once 1.0 is out the door, this repo will switch to showing the latest release on the `master` branch.
+**The first version of the app is under active development.** As such, the default branch is currently set to `develop`. Once 1.0 is out the door, this repo will switch to showing the latest release on the `master` branch.
 
 ## Credits
 * Bike icon by [Scott Lewis](https://thenounproject.com/iconify) from the [Noun Project](https://thenounproject.com).
