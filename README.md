@@ -2,7 +2,9 @@
 
 # Bixlet [![Build Status](https://travis-ci.org/bgilham/Bixlet.svg?branch=develop)](https://travis-ci.org/bgilham/Bixlet)
 
-Bixlet is an open source iOS app, written in Swift, for monitoring the status of the 80 stations in Toronto's [bike sharing](http://www.bikesharetoronto.com) system. 
+Bixlet is an open source iOS app, written in Swift, for monitoring the status of the 80 stations in Toronto's [bike sharing](http://www.bikesharetoronto.com) system.
+
+Follow the [@bixletapp](https://twitter.com/bixletapp) Twitter account for updates.
 
 ## Requirements
 * iOS 9.2+
