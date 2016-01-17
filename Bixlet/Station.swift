@@ -19,6 +19,7 @@ struct Station {
     let landMark: Int
     let lastCommunicationTime: NSDate
     let latitude: Double
+    let location: String?
     let longitude: Double
     let postalCode: String?
     let stAddress1: String?
@@ -42,6 +43,7 @@ extension Station: Decodable {
         return f
             <*> (j <|   "lastCommunicationTime" >>- toNSDate)
             <*> j <|    "latitude"
+            <*> j <|?   "location"
             <*> j <|    "longitude"
             <*> j <|?   "postalCode"
             <*> j <|?   "stAddress1"
@@ -54,13 +56,6 @@ extension Station: Decodable {
     }
 }
 
-let jsonDateFormatter: NSDateFormatter = {
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-    dateFormatter.dateFormat = "yyyy-MM-dd' 'HH:mm:ss' 'a" // 2016-01-11 20:40:57 PM
-    return dateFormatter
-}()
-
 let toNSDate: String -> Decoded<NSDate> = {
-    .fromOptional(jsonDateFormatter.dateFromString($0))
+    .fromOptional(StationDateFormatter().dateFromString($0))
 }

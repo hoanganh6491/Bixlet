@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170215931C4B3D87005D719B /* StationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215921C4B3D87005D719B /* StationTests.swift */; };
+		170215961C4B418B005D719B /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 170215951C4B418B005D719B /* stations.json */; };
+		170215991C4B5B8A005D719B /* StationDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215981C4B5B8A005D719B /* StationDateFormatter.swift */; };
 		1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD661C433F6A00904644 /* AppDelegate.swift */; };
 		1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6D1C433F6A00904644 /* Assets.xcassets */; };
 		1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */; };
-		1769FD7C1C433F6B00904644 /* BixletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD7B1C433F6B00904644 /* BixletTests.swift */; };
 		1769FD871C433F9C00904644 /* Bixlet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD861C433F9C00904644 /* Bixlet.storyboard */; };
 		1769FD8A1C4340AF00904644 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD891C4340AF00904644 /* Podfile */; };
 		1769FD8D1C43428900904644 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD8C1C43428900904644 /* Station.swift */; };
@@ -33,13 +35,15 @@
 
 /* Begin PBXFileReference section */
 		0BCE5A729E1E12BDFF10CBDF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		170215921C4B3D87005D719B /* StationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTests.swift; sourceTree = "<group>"; };
+		170215951C4B418B005D719B /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		170215981C4B5B8A005D719B /* StationDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDateFormatter.swift; sourceTree = "<group>"; };
 		1769FD631C433F6A00904644 /* Bixlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bixlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD661C433F6A00904644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1769FD6D1C433F6A00904644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1769FD701C433F6A00904644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1769FD721C433F6A00904644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1769FD771C433F6B00904644 /* BixletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BixletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1769FD7B1C433F6B00904644 /* BixletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BixletTests.swift; sourceTree = "<group>"; };
 		1769FD7D1C433F6B00904644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1769FD861C433F9C00904644 /* Bixlet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bixlet.storyboard; sourceTree = "<group>"; };
 		1769FD891C4340AF00904644 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -71,6 +75,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170215901C4A8E18005D719B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				170215911C4B3D2A005D719B /* Models */,
+				1769FD7D1C433F6B00904644 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		170215911C4B3D2A005D719B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				170215921C4B3D87005D719B /* StationTests.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		170215941C4B417D005D719B /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				170215951C4B418B005D719B /* stations.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		170215971C4B5B78005D719B /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				170215981C4B5B8A005D719B /* StationDateFormatter.swift */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
 		1769FD5A1C433F6A00904644 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +140,8 @@
 		1769FD7A1C433F6B00904644 /* BixletTests */ = {
 			isa = PBXGroup;
 			children = (
-				1769FD7B1C433F6B00904644 /* BixletTests.swift */,
-				1769FD7D1C433F6B00904644 /* Info.plist */,
+				170215941C4B417D005D719B /* Fixtures */,
+				170215901C4A8E18005D719B /* App */,
 			);
 			path = BixletTests;
 			sourceTree = "<group>";
@@ -118,6 +155,7 @@
 				1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */,
 				1769FD721C433F6A00904644 /* Info.plist */,
 				1769FD8E1C434BE400904644 /* Client */,
+				170215971C4B5B78005D719B /* Formatters */,
 				1769FD8B1C43421200904644 /* Models */,
 				17A23CD41C4742A900C8FF47 /* Parsers */,
 			);
@@ -263,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170215961C4B418B005D719B /* stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1769FD8D1C43428900904644 /* Station.swift in Sources */,
+				170215991C4B5B8A005D719B /* StationDateFormatter.swift in Sources */,
 				17A23CD61C4742D500C8FF47 /* StationsParser.swift in Sources */,
 				1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */,
 				17F4E5631C4760B4007B0A07 /* ClientError.swift in Sources */,
@@ -334,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1769FD7C1C433F6B00904644 /* BixletTests.swift in Sources */,
+				170215931C4B3D87005D719B /* StationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +513,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BixletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.briangilham.BixletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bixlet.app/Bixlet";
 			};
 			name = Debug;
@@ -485,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BixletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.briangilham.BixletTests;
