@@ -14,17 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        Client().fetchStations { (result) in
-            switch(result) {
-            case .Failure(let error):
-                print("ERROR: Failed to fetch Stations. \(error)")
-            case .Success(let data):
-                let stations = StationsParser().stationModels(data)
-                print("Stations: \(stations)")
-            }
-        }
-        
         return true
     }
 
