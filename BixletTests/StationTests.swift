@@ -10,20 +10,9 @@ import XCTest
 @testable import Bixlet
 import Argo
 
-class StationTests: XCTestCase {
-    func fixtureData() -> NSData {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("stations", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
-        return data
-    }
-    
-    func fixtureJSON() -> AnyObject? {
-        let json = try? NSJSONSerialization.JSONObjectWithData(self.fixtureData(), options: [])
-        return json
-    }
-    
+class StationTests: BixletTestCase {
     func testStation() -> Station? {
-        if let  fixtureJSON = self.fixtureJSON(),
+        if let  fixtureJSON = self.jsonFromFixtureData(self.dataFromFixture("stations")),
                 stations:[Station] = decodeWithRootKey("stationBeanList", fixtureJSON) {
             return stations[0]
         } else {

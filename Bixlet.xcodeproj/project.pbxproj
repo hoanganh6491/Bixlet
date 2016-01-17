@@ -10,6 +10,7 @@
 		170215931C4B3D87005D719B /* StationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215921C4B3D87005D719B /* StationTests.swift */; };
 		170215961C4B418B005D719B /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 170215951C4B418B005D719B /* stations.json */; };
 		170215991C4B5B8A005D719B /* StationDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215981C4B5B8A005D719B /* StationDateFormatter.swift */; };
+		1702159C1C4C2379005D719B /* BixletTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702159B1C4C2379005D719B /* BixletTestCase.swift */; };
 		1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD661C433F6A00904644 /* AppDelegate.swift */; };
 		1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6D1C433F6A00904644 /* Assets.xcassets */; };
 		1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 		170215921C4B3D87005D719B /* StationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTests.swift; sourceTree = "<group>"; };
 		170215951C4B418B005D719B /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		170215981C4B5B8A005D719B /* StationDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDateFormatter.swift; sourceTree = "<group>"; };
+		1702159B1C4C2379005D719B /* BixletTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BixletTestCase.swift; sourceTree = "<group>"; };
 		1769FD631C433F6A00904644 /* Bixlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bixlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD661C433F6A00904644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1769FD6D1C433F6A00904644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		1702159A1C4C236B005D719B /* Test Case */ = {
+			isa = PBXGroup;
+			children = (
+				1702159B1C4C2379005D719B /* BixletTestCase.swift */,
+			);
+			name = "Test Case";
+			sourceTree = "<group>";
+		};
 		1769FD5A1C433F6A00904644 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		1769FD7A1C433F6B00904644 /* BixletTests */ = {
 			isa = PBXGroup;
 			children = (
+				1702159A1C4C236B005D719B /* Test Case */,
 				170215941C4B417D005D719B /* Fixtures */,
 				170215901C4A8E18005D719B /* App */,
 			);
@@ -375,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				170215931C4B3D87005D719B /* StationTests.swift in Sources */,
+				1702159C1C4C2379005D719B /* BixletTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
