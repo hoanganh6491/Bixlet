@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bbw-Dh-YEP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hWh-uy-1Jc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bixlet-->
         <scene sceneID="s1u-XN-9JG">
             <objects>
                 <viewController id="bbw-Dh-YEP" sceneMemberID="viewController">
@@ -16,10 +16,45 @@
                     <view key="view" contentMode="scaleToFill" id="TMm-aZ-OYq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Cf-Zi-PAE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Cf-Zi-PAE" firstAttribute="top" secondItem="TMm-aZ-OYq" secondAttribute="top" id="2EO-dQ-8Hg"/>
+                            <constraint firstItem="0Cf-Zi-PAE" firstAttribute="leading" secondItem="TMm-aZ-OYq" secondAttribute="leading" id="ESc-FU-fHB"/>
+                            <constraint firstAttribute="trailing" secondItem="0Cf-Zi-PAE" secondAttribute="trailing" id="Rik-9J-cFy"/>
+                            <constraint firstAttribute="bottom" secondItem="0Cf-Zi-PAE" secondAttribute="bottom" id="tAf-Km-CNr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Bixlet" id="e1d-WY-Of3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0E-EU-ZIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="470"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ejp-U4-VcL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hWh-uy-1Jc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NBw-ep-I19">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Py6-QB-CnU">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="bbw-Dh-YEP" kind="relationship" relationship="rootViewController" id="F30-av-yYa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtJ-UL-TNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="470"/>
         </scene>

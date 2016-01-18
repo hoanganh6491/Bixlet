@@ -13,6 +13,7 @@
 		1702159C1C4C2379005D719B /* BixletTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702159B1C4C2379005D719B /* BixletTestCase.swift */; };
 		1702159F1C4C269E005D719B /* StationsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702159E1C4C269E005D719B /* StationsParserTests.swift */; };
 		170215A21C4C302C005D719B /* StationDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215A11C4C302C005D719B /* StationDateFormatterTests.swift */; };
+		170215A41C4C7CD0005D719B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170215A31C4C7CD0005D719B /* MapKit.framework */; };
 		1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD661C433F6A00904644 /* AppDelegate.swift */; };
 		1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6D1C433F6A00904644 /* Assets.xcassets */; };
 		1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		1702159B1C4C2379005D719B /* BixletTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BixletTestCase.swift; sourceTree = "<group>"; };
 		1702159E1C4C269E005D719B /* StationsParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsParserTests.swift; sourceTree = "<group>"; };
 		170215A11C4C302C005D719B /* StationDateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDateFormatterTests.swift; sourceTree = "<group>"; };
+		170215A31C4C7CD0005D719B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1769FD631C433F6A00904644 /* Bixlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bixlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD661C433F6A00904644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1769FD6D1C433F6A00904644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170215A41C4C7CD0005D719B /* MapKit.framework in Frameworks */,
 				6FB9A2140D85C686ED196EDB /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +227,7 @@
 		53F95D33E177E690AADA0A9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				170215A31C4C7CD0005D719B /* MapKit.framework */,
 				6E4BFBB600F92EC0FE428DFF /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -292,6 +296,11 @@
 					1769FD621C433F6A00904644 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9538FKS583;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1769FD761C433F6B00904644 = {
 						CreatedOnToolsVersion = 7.2;
