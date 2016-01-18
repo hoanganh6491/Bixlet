@@ -15,6 +15,7 @@
 		170215A21C4C302C005D719B /* StationDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215A11C4C302C005D719B /* StationDateFormatterTests.swift */; };
 		170215A41C4C7CD0005D719B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170215A31C4C7CD0005D719B /* MapKit.framework */; };
 		170215A71C4C8970005D719B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215A61C4C8970005D719B /* MapViewController.swift */; };
+		170215A91C4D2AC0005D719B /* invalid_stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 170215A81C4D2AC0005D719B /* invalid_stations.json */; };
 		1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD661C433F6A00904644 /* AppDelegate.swift */; };
 		1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6D1C433F6A00904644 /* Assets.xcassets */; };
 		1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */; };
@@ -48,6 +49,7 @@
 		170215A11C4C302C005D719B /* StationDateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDateFormatterTests.swift; sourceTree = "<group>"; };
 		170215A31C4C7CD0005D719B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		170215A61C4C8970005D719B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		170215A81C4D2AC0005D719B /* invalid_stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalid_stations.json; sourceTree = "<group>"; };
 		1769FD631C433F6A00904644 /* Bixlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bixlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD661C433F6A00904644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1769FD6D1C433F6A00904644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				170215951C4B418B005D719B /* stations.json */,
+				170215A81C4D2AC0005D719B /* invalid_stations.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170215A91C4D2AC0005D719B /* invalid_stations.json in Resources */,
 				170215961C4B418B005D719B /* stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

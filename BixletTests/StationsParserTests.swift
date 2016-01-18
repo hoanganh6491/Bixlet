@@ -34,4 +34,11 @@ class StationsParserTests:BixletTestCase {
         let result = parser.stationModels(data)
         XCTAssertNil(result)
     }
+    
+    func testParsingInvalidData() {
+        let stationsData = self.dataFromFixture("invalid_stations")
+        let parser = StationsParser()
+        
+        XCTAssertNil(parser.stationModels(stationsData))
+    }
 }
