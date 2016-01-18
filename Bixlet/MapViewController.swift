@@ -17,6 +17,17 @@ class MapViewController:UIViewController {
     override func viewDidLoad() {
         self.mapView.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
+        self.showInitialLocation()
+    }
+    
+    func showInitialLocation() {
+        let span = MKCoordinateSpanMake(0.3, 0.3)
+        let location = CLLocation(latitude: 43.7000, longitude: -79.4000)
+        let region = MKCoordinateRegion(
+            center: location.coordinate,
+            span: span
+        )
+        self.mapView.setRegion(region, animated: true)
     }
     
     func showUserLocation() {

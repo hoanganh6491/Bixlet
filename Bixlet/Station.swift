@@ -9,6 +9,7 @@
 import Foundation
 import Argo
 import Curry
+import MapKit
 
 struct Station {
     let altitude: String?
