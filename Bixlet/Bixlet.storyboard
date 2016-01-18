@@ -8,7 +8,7 @@
         <!--Bixlet-->
         <scene sceneID="s1u-XN-9JG">
             <objects>
-                <viewController id="bbw-Dh-YEP" sceneMemberID="viewController">
+                <viewController id="bbw-Dh-YEP" customClass="MapViewController" customModule="Bixlet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYa-NU-x9g"/>
                         <viewControllerLayoutGuide type="bottom" id="vSD-2K-k96"/>
@@ -30,6 +30,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bixlet" id="e1d-WY-Of3"/>
+                    <connections>
+                        <outlet property="mapView" destination="0Cf-Zi-PAE" id="Jl6-sV-Eu8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0E-EU-ZIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

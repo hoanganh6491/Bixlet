@@ -14,6 +14,7 @@
 		1702159F1C4C269E005D719B /* StationsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702159E1C4C269E005D719B /* StationsParserTests.swift */; };
 		170215A21C4C302C005D719B /* StationDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215A11C4C302C005D719B /* StationDateFormatterTests.swift */; };
 		170215A41C4C7CD0005D719B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170215A31C4C7CD0005D719B /* MapKit.framework */; };
+		170215A71C4C8970005D719B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170215A61C4C8970005D719B /* MapViewController.swift */; };
 		1769FD671C433F6A00904644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769FD661C433F6A00904644 /* AppDelegate.swift */; };
 		1769FD6E1C433F6A00904644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6D1C433F6A00904644 /* Assets.xcassets */; };
 		1769FD711C433F6A00904644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 		1702159E1C4C269E005D719B /* StationsParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsParserTests.swift; sourceTree = "<group>"; };
 		170215A11C4C302C005D719B /* StationDateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDateFormatterTests.swift; sourceTree = "<group>"; };
 		170215A31C4C7CD0005D719B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		170215A61C4C8970005D719B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1769FD631C433F6A00904644 /* Bixlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bixlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1769FD661C433F6A00904644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1769FD6D1C433F6A00904644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		170215A51C4C8958005D719B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				170215A61C4C8970005D719B /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		1769FD5A1C433F6A00904644 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1769FD881C433FB100904644 /* App */,
+				170215A51C4C8958005D719B /* Map */,
 			);
 			path = Bixlet;
 			sourceTree = "<group>";
@@ -409,6 +420,7 @@
 				17F4E5631C4760B4007B0A07 /* ClientError.swift in Sources */,
 				17FEEA431C44A9010049FE05 /* Client.swift in Sources */,
 				17A23CD81C475D5800C8FF47 /* ClientResult.swift in Sources */,
+				170215A71C4C8970005D719B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
