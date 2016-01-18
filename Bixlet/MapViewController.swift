@@ -15,6 +15,22 @@ class MapViewController:UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
+        self.mapView.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func showUserLocation() {
+        let span = MKCoordinateSpanMake(0.1, 0.1)
+        let region = MKCoordinateRegion(
+            center: self.mapView.userLocation.coordinate,
+            span: span
+        )
+        self.mapView.setRegion(region, animated: true)
+    }
+}
+
+extension MapViewController:MKMapViewDelegate {
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        self.showUserLocation()
     }
 }
