@@ -8,7 +8,7 @@
         <!--Bixlet-->
         <scene sceneID="s1u-XN-9JG">
             <objects>
-                <viewController id="bbw-Dh-YEP" customClass="MapViewController" customModule="Bixlet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bbw-Dh-YEP" customClass="StationsViewController" customModule="Bixlet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYa-NU-x9g"/>
                         <viewControllerLayoutGuide type="bottom" id="vSD-2K-k96"/>
