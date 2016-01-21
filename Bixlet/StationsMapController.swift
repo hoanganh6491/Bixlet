@@ -11,6 +11,11 @@ import MapKit
 
 class StationsMapController:NSObject, MKMapViewDelegate {
     var mapView:MKMapView?
+    var stations:[Station] = [] {
+        didSet {
+            print("WORKED")
+        }
+    }
     
     struct LocationConstants {
         static let InitialLatitude = 43.7000

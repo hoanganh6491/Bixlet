@@ -13,6 +13,8 @@ class StationsViewController:UIViewController {
     let locationManager:CLLocationManager
     let mapController:StationsMapController
     let mapDelegate:StationsMapDelegate
+    let client:Client = Client()
+    let parser:StationsParser = StationsParser()
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -29,5 +31,22 @@ class StationsViewController:UIViewController {
         self.locationManager.delegate = self.mapDelegate
         self.locationManager.requestWhenInUseAuthorization()
         self.mapController.showInitialLocation(false)
+        self.fetchStations()
+    }
+    
+    private func fetchStations() {
+        self.client.fetchStations { result in
+            switch result {
+            case .Failure(let error):
+                print("ERROR: Failed to fetch Stations. \(error)")
+                return
+            case .Success(let data):
+                if let stations = self.parser.stationModels(data) {
+                    self.mapController.stations = stations
+                } else {
+                    print("ERROR: Expected to parse an array of Station models.")
+                }
+            }
+        }
     }
 }
