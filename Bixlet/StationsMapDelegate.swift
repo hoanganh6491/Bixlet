@@ -17,10 +17,6 @@ class StationsMapDelegate:NSObject, MKMapViewDelegate, CLLocationManagerDelegate
         super.init()
     }
     
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        self.mapController.showUserLocation(true)
-    }
-    
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         switch status {
         case .AuthorizedAlways, .AuthorizedWhenInUse:
