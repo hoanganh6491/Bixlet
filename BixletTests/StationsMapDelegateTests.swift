@@ -22,15 +22,6 @@ class MockMapController:StationsMapController {
 }
 
 class StationsMapDelegateTests:BixletTestCase {
-    func testThatItCallsShowUserLocationOnUpdate() {
-        let mapView = MKMapView(frame: CGRectMake(0,0,600,400))
-        let mockController = MockMapController(mapView: mapView)
-        let mapDelegate = StationsMapDelegate(mapController: mockController)
-        
-        mapDelegate.mapView(mapView, didUpdateUserLocation: MKUserLocation())
-        XCTAssertTrue(mockController.didCallShowUserLocation)
-    }
-    
     func testThatAlwaysAuthCallsShowUserLocation() {
         let mapView = MKMapView(frame: CGRectMake(0,0,600,400))
         let mockController = MockMapController(mapView: mapView)

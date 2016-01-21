@@ -75,7 +75,7 @@ class StationsMapController:NSObject, MKMapViewDelegate {
             
             for station in self.stations {
                 let annotation = StationAnnotation(
-                    title: station.location,
+                    title: station.stationName,
                     latitude: station.latitude,
                     longitude: station.longitude
                 )
