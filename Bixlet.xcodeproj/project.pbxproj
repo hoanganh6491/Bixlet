@@ -70,6 +70,7 @@
 		1769FD8C1C43428900904644 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		17A23CD51C4742D500C8FF47 /* StationsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsParser.swift; sourceTree = "<group>"; };
 		17A23CD71C475D5800C8FF47 /* ClientResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientResult.swift; sourceTree = "<group>"; };
+		17BE8DD11C508D97008C0676 /* DefaultLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DefaultLocation.gpx; sourceTree = "<group>"; };
 		17F4E5621C4760B4007B0A07 /* ClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		17FEEA421C44A9010049FE05 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		6E4BFBB600F92EC0FE428DFF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +225,7 @@
 				1769FD6D1C433F6A00904644 /* Assets.xcassets */,
 				1769FD6F1C433F6A00904644 /* LaunchScreen.storyboard */,
 				1769FD721C433F6A00904644 /* Info.plist */,
+				17BE8DD11C508D97008C0676 /* DefaultLocation.gpx */,
 				1769FD8E1C434BE400904644 /* Client */,
 				170215971C4B5B78005D719B /* Formatters */,
 				1769FD8B1C43421200904644 /* Models */,

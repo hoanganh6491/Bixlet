@@ -11,10 +11,24 @@ import MapKit
 
 class StationsMapDelegate:NSObject, MKMapViewDelegate, CLLocationManagerDelegate {
     let mapController:StationsMapController
+    var firstUserLocationFound:Bool = false
     
     init(mapController:StationsMapController) {
         self.mapController = mapController
         super.init()
+    }
+    
+    func mapViewDidFinishLoadingMap(mapView: MKMapView) {
+        self.mapController.showInitialLocation(false)
+    }
+    
+    func mapView(mapView: MKMapView, didFailToLocateUserWithError error: NSError) {
+        print("ERROR: Failed to locate user. \(error.localizedDescription)")
+    }
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        self.mapController.showUserLocation(true)
+        self.firstUserLocationFound = true
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

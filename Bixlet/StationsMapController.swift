@@ -34,8 +34,8 @@ class StationsMapController:NSObject, MKMapViewDelegate {
     }
     
     struct LocationConstants {
-        static let InitialLatitude = 43.7000
-        static let InitialLongitude = -79.4000
+        static let InitialLatitude = 43.656866
+        static let InitialLongitude = -79.384230
     }
     
     init(mapView:MKMapView?) {
@@ -45,7 +45,7 @@ class StationsMapController:NSObject, MKMapViewDelegate {
     
     func showInitialLocation(animated:Bool) {
         if let map = self.mapView {
-            let span = MKCoordinateSpanMake(0.3, 0.3)
+            let span = MKCoordinateSpanMake(0.05, 0.05)
             let location = CLLocation(
                 latitude: LocationConstants.InitialLatitude,
                 longitude: LocationConstants.InitialLongitude

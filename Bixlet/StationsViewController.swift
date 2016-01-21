@@ -33,9 +33,9 @@ class StationsViewController:UIViewController {
         self.setupNavBar()
         self.mapController.mapView = self.mapView
         self.mapView.delegate = self.mapDelegate
+        self.mapView.userTrackingMode = .Follow
         self.locationManager.delegate = self.mapDelegate
         self.locationManager.requestWhenInUseAuthorization()
-        self.mapController.showInitialLocation(false)
         self.fetchStations()
     }
     
