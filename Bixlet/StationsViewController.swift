@@ -15,6 +15,7 @@ class StationsViewController:UIViewController {
     let mapDelegate:StationsMapDelegate
     let client:Client = Client()
     let parser:StationsParser = StationsParser()
+    let spinner:UIActivityIndicatorView
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -22,10 +23,14 @@ class StationsViewController:UIViewController {
         self.locationManager = CLLocationManager()
         self.mapController = StationsMapController(mapView: nil)
         self.mapDelegate = StationsMapDelegate(mapController: self.mapController)
+        self.spinner = UIActivityIndicatorView(activityIndicatorStyle: .White)
+        self.spinner.color = UIColor.blackColor()
+        self.spinner.hidesWhenStopped = true
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
+        self.setupNavBar()
         self.mapController.mapView = self.mapView
         self.mapView.delegate = self.mapDelegate
         self.locationManager.delegate = self.mapDelegate
@@ -34,8 +39,15 @@ class StationsViewController:UIViewController {
         self.fetchStations()
     }
     
+    private func setupNavBar() {
+        let buttonItem = UIBarButtonItem(customView: self.spinner)
+        self.navigationItem.rightBarButtonItem = buttonItem
+    }
+    
     private func fetchStations() {
-        self.client.fetchStations { result in
+        self.spinner.startAnimating()
+        self.client.fetchStations { [unowned self] result in
+            self.spinner.stopAnimating()
             switch result {
             case .Failure(let error):
                 print("ERROR: Failed to fetch Stations. \(error)")

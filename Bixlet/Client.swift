@@ -14,15 +14,17 @@ class Client: NSObject {
     
     func fetchStations(completion: CompletionHandler) {
         NSURLSession.sharedSession().dataTaskWithURL(Client.StationsURL) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            if let e = error {
-                completion(.Failure(ClientError.UnknownError(e)))
-            } else {
-                if let d = data {
-                    completion(.Success(d))
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if let e = error {
+                    completion(.Failure(ClientError.UnknownError(e)))
                 } else {
-                    completion(.Failure(ClientError.NoData))
+                    if let d = data {
+                        completion(.Success(d))
+                    } else {
+                        completion(.Failure(ClientError.NoData))
+                    }
                 }
-            }
+            })
         }.resume()
     }
 }
