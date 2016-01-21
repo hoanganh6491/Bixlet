@@ -9,11 +9,27 @@
 import UIKit
 import MapKit
 
+class StationAnnotation:NSObject, MKAnnotation {
+    let title:String?
+    let latitude:Double
+    let longitude:Double
+    
+    var coordinate:CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(latitude, longitude)
+    }
+    
+    init(title: String?, latitude: Double, longitude: Double) {
+        self.title = title
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
 class StationsMapController:NSObject, MKMapViewDelegate {
     var mapView:MKMapView?
     var stations:[Station] = [] {
         didSet {
-            print("WORKED")
+            self.displayStations()
         }
     }
     
@@ -50,6 +66,21 @@ class StationsMapController:NSObject, MKMapViewDelegate {
                 span: span
             )
             map.setRegion(region, animated: animated)
+        }
+    }
+    
+    func displayStations() {
+        if let map = self.mapView {
+            map.removeAnnotations(map.annotations)
+            
+            for station in self.stations {
+                let annotation = StationAnnotation(
+                    title: station.location,
+                    latitude: station.latitude,
+                    longitude: station.longitude
+                )
+                map.addAnnotation(annotation)
+            }
         }
     }
 }
